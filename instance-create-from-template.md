@@ -16,7 +16,7 @@ W tej instrukcji opisuję kroki, które pozwolą Ci stworzyć instancję wirtual
 
 Tworzymy plik o nazwie `main.tf` i zaczynamy od konfiguracji providera:
 
-\```hcl
+\```
 terraform {
   required_providers {
     cloudstack = {
@@ -39,7 +39,7 @@ Zastąp wartości `URL_API_CLOUDSTACK`, `TWÓJ_KLUCZ_API` i `TWÓJ_SEKRETNY_KLUC
 
 W tym samym pliku `main.tf` dodajemy definicję VM:
 
-\```hcl
+\```
 resource "cloudstack_instance" "my_instance" {
   name           = "nazwa-instancji"
   display_name   = "Nazwa Wyświetlana"
@@ -60,7 +60,7 @@ Wykonaj następujące polecenia:
 
 - `terraform plan`: To polecenie pozwala zobaczyć, jakie zmiany zostaną wprowadzone w Twoim środowisku przed ich rzeczywistym zastosowaniem. Jest to sposób na weryfikację i zaplanowanie zmian.
 
-\```bash
+\```
 terraform init
 terraform plan
 \```
@@ -71,7 +71,7 @@ Po sprawdzeniu planowanych zmian możemy je zastosować:
 
 - `terraform apply`: Polecenie to stosuje zmiany niezbędne do osiągnięcia pożądanej konfiguracji zdefiniowanej w plikach konfiguracyjnych.
 
-\```bash
+\```
 terraform apply
 \```
 
