@@ -52,7 +52,7 @@ resource "cloudstack_network" "my_network" {
 
 Kontynuując w `main.tf`:
 
-\```hcl
+```hcl
 resource "cloudstack_instance" "my_instance" {
   count = 3
   name = "instancja-${count.index}"
