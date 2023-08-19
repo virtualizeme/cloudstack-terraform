@@ -1,4 +1,4 @@
-# Terraform Provider dla Cloudstack - intrukcje w formacie markdown z podstawowymi mozliwosciami uzycia Terraform w chmurze Apache Cloudstack.
+# Terraform Provider dla Cloudstack - instrukcje w formacie markdown z podstawowymi mozliwosciami uzycia Terraform w chmurze Apache Cloudstack.
 
 ## Wymagania
 
