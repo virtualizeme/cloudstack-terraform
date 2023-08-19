@@ -1,5 +1,7 @@
 # Terraform Provider dla Cloudstack - instrukcje w formacie markdown z podstawowymi mozliwosciami uzycia Terraform w chmurze Apache Cloudstack.
 
+![Logo](https://github.com/virtualizeme/cloudstack-terraform/blob/main/terraform-cloudstack.png)
+
 ## Wymagania
 
 - Zainstalowany [Terraform](https://www.terraform.io/downloads.html).
