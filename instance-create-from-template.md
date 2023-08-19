@@ -16,7 +16,7 @@ W tej instrukcji opisuję kroki, które pozwolą Ci stworzyć instancję wirtual
 
 Tworzymy plik o nazwie `main.tf` i zaczynamy od konfiguracji providera:
 
-\```
+```hcl
 terraform {
   required_providers {
     cloudstack = {
@@ -31,7 +31,7 @@ provider "cloudstack" {
   api_key    = "TWÓJ_KLUCZ_API"
   secret_key = "TWÓJ_SEKRETNY_KLUCZ"
 }
-\```
+```
 
 Zastąp wartości `URL_API_CLOUDSTACK`, `TWÓJ_KLUCZ_API` i `TWÓJ_SEKRETNY_KLUCZ` odpowiednimi danymi dostępu do Twojego Apache CloudStack.
 
@@ -39,7 +39,7 @@ Zastąp wartości `URL_API_CLOUDSTACK`, `TWÓJ_KLUCZ_API` i `TWÓJ_SEKRETNY_KLUC
 
 W tym samym pliku `main.tf` dodajemy definicję VM:
 
-\```
+```hcl
 resource "cloudstack_instance" "my_instance" {
   name           = "nazwa-instancji"
   display_name   = "Nazwa Wyświetlana"
@@ -48,7 +48,7 @@ resource "cloudstack_instance" "my_instance" {
   zone            = "ID_STREFY"
   // ... inne parametry według potrzeb
 }
-\```
+```
 
 Zastąp powyższe wartości odpowiednimi dla Twojego środowiska CloudStack.
 
@@ -60,10 +60,10 @@ Wykonaj następujące polecenia:
 
 - `terraform plan`: To polecenie pozwala zobaczyć, jakie zmiany zostaną wprowadzone w Twoim środowisku przed ich rzeczywistym zastosowaniem. Jest to sposób na weryfikację i zaplanowanie zmian.
 
-\```
+```bash
 terraform init
 terraform plan
-\```
+```
 
 ### 4. Aplikacja zmian
 
@@ -71,9 +71,9 @@ Po sprawdzeniu planowanych zmian możemy je zastosować:
 
 - `terraform apply`: Polecenie to stosuje zmiany niezbędne do osiągnięcia pożądanej konfiguracji zdefiniowanej w plikach konfiguracyjnych.
 
-\```
+```bash
 terraform apply
-\```
+```
 
 Po potwierdzeniu Terraform stworzy instancję wirtualną maszyny w Apache CloudStack.
 
